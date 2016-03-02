@@ -1,0 +1,4 @@
+D:\test\dialog\bin\dialog.dll
+D:\test\dialog\bin\dialog.pdb
+D:\test\dialog\obj\Debug\dialog.dll
+D:\test\dialog\obj\Debug\dialog.pdb
