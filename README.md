@@ -1,2 +1,2 @@
 # dialog
-A dialog based jQuery plugin and Knockout.js
+A dialog based on jQuery plugin and Knockout.js
