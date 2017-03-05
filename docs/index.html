@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title></title>
+    <link href="css/dialog2.css" rel="stylesheet" />
+    <link href="css/homev2.css" rel="stylesheet" />
+    <script src="/src/require.js" data-main="js/index"></script>
+    <script type="text/javascript">
+        requirejs.config({
+            paths: {
+                "jquery": "/src/jquery-1.8.3.min",
+                "knockout": "/src/knockout-3.2.0",
+                "placeholder": "/src/jquery.placeholder.min",
+                "jquery.cookie": "/src/jquery.cookie",
+
+                'confirm': '/src/jquery/confirm',
+                'alert': '/src/jquery/alert',
+                'login': '/src/jquery/login',
+                'login2': '/src/jquery/login2',
+                'login-reg': '/src/jquery/login-reg',
+                'dialog': '/src/jquery/dialog',
+                'dialog-double': '/src/jquery/dialog-double',
+
+                'ko-confirm': '/src/ko/confirm',
+                'ko-alert': '/src/ko/alert',
+                'ko-login': '/src/ko/login',
+                'ko-login2': '/src/ko/login2',
+                'ko-dialog': '/src/ko/dialog'
+            },
+            shim: {
+                "placeholder": {
+                    deps: ['jquery']
+                },
+                "jquery.cookie": {
+                    deps: ['jquery']
+                }
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <div style="text-align:center; margin:50px 0 20px 0;">Jquery 通用组件</div>
+    <div style="text-align:center;">
+        <a href="#" id="header_login">登 录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" id="header_login2">登 录2</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" id="header_login3">登 录 + 注册</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" id="header_confirm">删除对话框</a>
+    </div>
+    <div style="text-align:center; margin:50px 0 20px 0;">Knockout.js 通用组件（注:两种登录方式不能交叉使用）</div>
+    <div style="text-align:center;">
+        <a href="#" data-bind="click:showLogin">登 录</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" data-bind="click:showLogin2">登 录2</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="#" data-bind="click:showConfirm">删除对话框</a>
+    </div>
+
+    <!-- ko if:$data && $data.show -->
+    <div data-bind='component: { name: "dialog",params: { isShow:show } }'></div>
+    <!-- /ko -->
+</body>
+</html>
